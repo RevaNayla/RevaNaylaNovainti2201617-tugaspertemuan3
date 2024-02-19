@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class no1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Menerima input tiga bilangan bulat negatif
+        int bilangan1 = 0, bilangan2 = 0, bilangan3 = 0;
+        
+        do {
+            System.out.print("Masukkan bilangan pertama (negatif): ");
+            bilangan1 = input.nextInt();
+        } while (bilangan1 >= 0);
+
+        do {
+            System.out.print("Masukkan bilangan kedua (negatif): ");
+            bilangan2 = input.nextInt();
+        } while (bilangan2 >= 0);
+
+        do {
+            System.out.print("Masukkan bilangan ketiga (negatif): ");
+            bilangan3 = input.nextInt();
+        } while (bilangan3 >= 0);
+
+        // Menampilkan hasil operasi (+, -, *, /) ketiga bilangan
+        System.out.println("Hasil Penjumlahan: " + (bilangan1 + bilangan2 + bilangan3));
+        System.out.println("Hasil Pengurangan: " + (bilangan1 - bilangan2 - bilangan3));
+        System.out.println("Hasil Perkalian: " + (bilangan1 * bilangan2 * bilangan3));
+
+        // Memastikan tidak ada pembagian oleh nol
+        if (bilangan2 != 0 && bilangan3 != 0) {
+            System.out.println("Hasil Pembagian: " + ((double) bilangan1 / bilangan2 / bilangan3));
+        } else {
+            System.out.println("Pembagian tidak dapat dilakukan karena salah satu bilangan adalah nol.");
+        }
+
+        // Menutup scanner
+        input.close();
+    }
+}
