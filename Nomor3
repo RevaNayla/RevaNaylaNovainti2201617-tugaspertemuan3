@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class no3 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Menerima input karakter dari pengguna
+        System.out.print("Masukkan karakter pertama: ");
+        char karakter1 = input.next().charAt(0);
+
+        System.out.print("Masukkan karakter kedua: ");
+        char karakter2 = input.next().charAt(0);
+
+        // Mendapatkan kode ASCII dari karakter
+        int asciiKarakter1 = (int) karakter1;
+        int asciiKarakter2 = (int) karakter2;
+
+        // Menjumlahkan kode ASCII
+        int hasilJumlah = asciiKarakter1 + asciiKarakter2;
+
+        // Menampilkan hasil
+        System.out.println("Kode ASCII dari '" + karakter1 + "' adalah " + asciiKarakter1);
+        System.out.println("Kode ASCII dari '" + karakter2 + "' adalah " + asciiKarakter2);
+        System.out.println("Hasil jumlah ASCII dari '" + karakter1 + "' dan '" + karakter2 + "' adalah " + hasilJumlah);
+
+        // Menutup scanner
+        input.close();
+    }
+}
+
